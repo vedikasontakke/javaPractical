@@ -1,0 +1,23 @@
+package Practical1;
+
+
+//practical1:B. Write a Program to demonstrate the use of ImageIcon
+//19CM059
+
+import javax.swing.JFrame;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+class ImageIconDemo {
+ public static void main(String args[]) {
+	 
+  JFrame frame = new JFrame();
+  ImageIcon icon = new ImageIcon("wal.jpg");
+  JLabel label = new JLabel(icon);
+  frame.add(label);
+  //frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+  frame.pack();
+  frame.setVisible(true);
+
+	 
+ }
+}

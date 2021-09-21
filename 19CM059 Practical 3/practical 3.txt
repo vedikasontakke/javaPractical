@@ -1,0 +1,31 @@
+package Practical3;
+
+import javax.swing.*;  
+import javax.swing.tree.DefaultMutableTreeNode;  
+public class TreeExample {  
+JFrame f;  
+TreeExample(){  
+    f=new JFrame();   
+    DefaultMutableTreeNode GrandFather=new DefaultMutableTreeNode("GrandFather");  
+    DefaultMutableTreeNode mother=new DefaultMutableTreeNode("mother");  
+    DefaultMutableTreeNode father=new DefaultMutableTreeNode("father");  
+    GrandFather.add(mother);  
+    GrandFather.add(father);  
+    DefaultMutableTreeNode Ram=new DefaultMutableTreeNode("Ram");  
+    DefaultMutableTreeNode Sham=new DefaultMutableTreeNode("Sham");  
+    
+    DefaultMutableTreeNode Sita=new DefaultMutableTreeNode("Sita");  
+    DefaultMutableTreeNode Rita=new DefaultMutableTreeNode("Rita");  
+    
+   
+    mother.add(Ram); mother.add(Sham); 
+    father.add(Sita); father.add(Rita);
+    
+    JTree jt=new JTree(GrandFather);  
+    f.add(jt);  
+    f.setSize(300,300);  
+    f.setVisible(true);  
+}  
+public static void main(String[] args) {  
+    new TreeExample();  
+}}  
